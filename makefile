@@ -28,4 +28,3 @@ clean:
 	rm bin/*.exe
 	rm -R build
 	rm -R bin
-
