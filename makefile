@@ -21,13 +21,13 @@ target4:
 bin/geometry.exe: build/main.o build/getperim.o build/getarea.o
 	g++ -std=c++11 $(CFLAGS) $^ -o $@
 
-build/main.o: src/main.cpp src/geometry.h
+build/src/main.o: src/main.cpp src/geometry.h
 	$(OBJ)
 
-build/getarea.o: src/getarea.cpp src/geometry.h
+build/src/getarea.o: src/getarea.cpp src/geometry.h
 	$(OBJ)
 
-build/getperim.o: src/getperim.cpp src/geometry.h
+build/src/getperim.o: src/getperim.cpp src/geometry.h
 	$(OBJ)
 
 bin/geometry-test: build/test/test.o build/test/getarea.o build/test/getperim.o
