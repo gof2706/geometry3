@@ -30,7 +30,7 @@ build/getarea.o: src/getarea.cpp src/geometry.h
 build/getperim.o: src/getperim.cpp src/geometry.h
 	$(OBJ)
 
-bin/test: build/test/test.o build/test/getarea.o build/test/getperim.o
+bin/geometry-test: build/test/test.o build/test/getarea.o build/test/getperim.o
 	g++ -std=c++11 $(CFLAGS)  $^ -o $@
 
 build/test/test.o: test/test.cpp test/testg.h
