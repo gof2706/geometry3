@@ -3,7 +3,7 @@ OBJ = g++ -std=c++11 $(CFLAGS) -c $< -o $@
 TOBJT = g++ -std=c++11 $(CFLAGS) -I thirtdparty/catch2 -c $< -o $@
 CFLAGS = -Wall -Werror
 OBJ = g++ -std=c++11 $(CFLAGS) -c $< -o $@
-TOBJT = g++ -std=c++11 $(CFLAGS) -I thirtdparty/catch2 -c $< -o $@
+TOBJT = g++ -std=c++11 $(CFLAGS) -I thirdparty/catch2 -c $< -o $@
 
 .PHONY: clean
 
