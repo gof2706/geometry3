@@ -1,3 +1,4 @@
-*.o
-*.swp
-geom
+*.txt
+build/*.o
+*.md
+bin/*.exe
