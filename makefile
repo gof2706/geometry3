@@ -33,13 +33,13 @@ build/getperim.o: src/getperim.cpp src/geometry.h
 bin/gtest: build/test/test.o build/test/getarea.o build/test/getperim.o
 	g++ -std=c++11 $(CFLAGS)  $^ -o $@
 
-build/test/test.o: test/test.cpp test/TESTgeometry.h
+build/test/test.o: test/test.cpp test/testg.h
 	$(TOBJT)
 
-build/test/getarea.o: test/TESTgetarea.cpp test/TESTgeometry.h
+build/test/getarea.o: test/TESTgetarea.cpp test/testg.h
 	$(TOBJT)
 
-build/test/getperim.o: test/TESTgetperim.cpp test/TESTgeometry.h
+build/test/getperim.o: test/TESTgetperim.cpp test/testg.h
 	$(TOBJT)
 
 
