@@ -1,4 +1,4 @@
-#include "testg.h"
+#include "TESTgeometry.h"
 float getarea(float r) {
 	float pl;
 	pl = p * r * r;
