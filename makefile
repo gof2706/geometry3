@@ -36,10 +36,10 @@ bin/gtest: build/test/test.o build/test/getarea.o build/test/getperim.o
 build/test/test.o: test/test.cpp test/testg.h
 	$(TOBJT)
 
-build/test/getarea.o: test/TESTgetarea.cpp test/testg.h
+build/test/getarea.o: test/tarea.cpp test/testg.h
 	$(TOBJT)
 
-build/test/getperim.o: test/TESTgetperim.cpp test/testg.h
+build/test/getperim.o: test/tper.cpp test/testg.h
 	$(TOBJT)
 
 
