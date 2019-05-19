@@ -1,6 +1,9 @@
 CFLAGS = -Wall -Werror
 OBJ = g++ -std=c++11 $(CFLAGS) -c $< -o $@
 TOBJT = g++ -std=c++11 $(CFLAGS) -I thirtdparty/catch2 -c $< -o $@
+CFLAGS = -Wall -Werror
+OBJ = g++ -std=c++11 $(CFLAGS) -c $< -o $@
+TOBJT = g++ -std=c++11 $(CFLAGS) -I thirtdparty/catch2 -c $< -o $@
 
 .PHONY: clean
 
@@ -34,13 +37,13 @@ build/src/getperim.o: src/getperim.cpp src/geometry.h
 bin/geometry-test: build/test/test.o build/test/getarea.o build/test/getperim.o
 	g++ -std=c++11 $(CFLAGS)  $^ -o $@
 
-build/test/test.o: test/test.cpp test/testg.h
+build/test/test.o: test/test.cpp test/TESTgeometry.h
 	$(TOBJT)
 
-build/test/getarea.o: test/tarea.cpp test/testg.h
+build/test/getarea.o: test/TESTgetarea.cpp test/TESTgeometry.h
 	$(TOBJT)
 
-build/test/getperim.o: test/tper.cpp test/testg.h
+build/test/getperim.o: test/TESTgetperim.cpp test/TESTgeometry.h
 	$(TOBJT)
 
 
@@ -49,3 +52,4 @@ clean:
 	rm bin/*.exe
 	rm -R -f build
 	rm -R -f bin
+
